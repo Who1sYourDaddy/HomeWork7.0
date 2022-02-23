@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
 
 
-        // private static int[] generateRandomArray() {
-        //     int[] arr = generateRandomArray();
+        //     Генератор случайных чисел применить не смог. Что значит "использовать не в методе Main" - не понятно. Выносил и выше
+        //     public class Main, и ниже, ни где у меня не заработало. Прошу показать, как это делается или дать ссылку на урок, где это пояснили.
         //     public static int[] generateRandomArray() {
         //         java.util.Random random = new java.util.Random();
         //         int[] arr = new int[30];
@@ -18,8 +18,10 @@ public class Main {
         //         return arr;
         //     }
         // }
+
         System.out.println("    Task One");
-        int[] moneyApril = {157000, 143000, 108000, 179000, 117000, 112000, 156000, 124000, 196000, 126000, 159000};
+        int[] moneyApril = {157000, 143000, 108000, 179000, 117000, 112000, 156000, 124000, 196000, 126000, 159000, 137000, 168000, 147000, 136600,
+                            157000, 143000, 108000, 179000, 117000, 112000, 156000, 124000, 196000, 126000, 159000, 137000, 168000, 147000, 136600};
         int sum = 0;
         for (int i = 0; i < moneyApril.length; i++) {
             sum += moneyApril[i];
@@ -41,10 +43,17 @@ public class Main {
         System.out.println("Максимальная сумма трат за день составила "+ max + " рублей");
         System.out.println("    Task Three");
 
-        //double average = 0;
-        //for (double i = 0; i < moneyApril.length; i++) {
+        double average = 0;
+        for (int i = 0; i < moneyApril.length; i++) {
             average += moneyApril[i]/moneyApril.length;
         }
-        System.out.println(average);
+        System.out.println("Средняя сумма трат за месяц составила " + average + " рублей");
+
+        System.out.println("    Task Four");
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0;  i--) {
+            System.out.print(reverseFullName[i]);
+        }
+
     }
 }
